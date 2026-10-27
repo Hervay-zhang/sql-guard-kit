@@ -1,0 +1,21 @@
+[project]
+name = "sql-guard-kit"
+version = "0.1.0"
+description = "执行前 SQL 安全校验 + 查询结果图表选型，Text2SQL / ChatBI 的通用组件"
+requires-python = ">=3.11"
+dependencies = ["sqlglot>=25,<31"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sqlguard"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
