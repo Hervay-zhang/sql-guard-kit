@@ -4,9 +4,17 @@
 
 从我在公司做的 ChatBI 项目里抽出来的独立模块，去掉了全部业务表、字段、统计口径与内部配置，只保留与业务无关的通用逻辑。
 
+## 快速开始
+
+```bash
+git clone https://github.com/Hervay-zhang/sql-guard-kit.git
+cd sql-guard-kit
+pip install -e ".[dev]"
+pytest                    # 42 passed
+python examples/demo.py   # 看拦截与出图效果
 ```
-pip install sqlglot
-```
+
+只需要运行时依赖的话：`pip install sqlglot`
 
 ## 为什么需要它
 
